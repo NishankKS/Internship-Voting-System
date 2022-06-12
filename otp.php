@@ -39,13 +39,16 @@ $mobile= $_POST['phone'];
             
             ### Check if OTP is matching
             if ( $VerificationStatus =='OTP Matched')
-            {
+            {?>
+                <script>
+                alert("Sucessfullly <?php echo $mobile;?> Verified");
                 
+                window.location.assign("http://localhost/Internship-Voting-System/category.php");
             
-            echo "Congratulations $mobile has been verified.";
-                die();
                 
-            }
+                
+                </script>
+           <?php }
             else
             {
                 echo "<script type='text/javascript'>alert('Sorry, OTP entered was incorrect. Please enter correct OTP');  window.history.back();  </script>";
@@ -90,12 +93,14 @@ $mobile= $_POST['phone'];
     </div>
 
     <!-- Login Form -->
-    <form action="otp.php" method="POST">
+    <form action="otp.php" method="post">
     <input type="text" id='otp' name="otp" maxlength="6" placeholder="XXXXXX"  required="required">
+    <input type="hidden"  name="VerificationSessionId" value="<?php echo $VerificationSessionId; ?>" >
       <!-- <input type="submit" id="sendOTP" class="fadeIn fourth" name="login" value="send OTP" />  -->
-      <div id="formFooter">
+      <!-- <div id="formFooter">
       <a class="underlineHover" href="otp.php">Resend OTP</a>
-    </div>
+    </div> -->
+    <input type="hidden"  name="phone" value="<?php echo $mobile; ?>" >
       <input type="submit" id="log" class="fadeIn fourth" value="Login">
     </form>
     
