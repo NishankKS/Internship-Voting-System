@@ -20,16 +20,16 @@
 
     <!-- Login Form -->
     <form>
-      <input type="text" id="login" class="fadeIn second" name="phone" placeholder="mobile number" required>
-      <input type="button" id="sendOTP" onclick="change()" class="fadeIn fourth" name="login" value="send OTP" />
-      <input type="text" id="password" class="fadeIn third" style="visibility:hidden" name="login" placeholder="otp">
-      <input type="submit" id="log" style="visibility:hidden" class="fadeIn fourth" value="Log In">
+      <input type="text" id="login" onchange="change()" class="fadeIn second" name="phone" placeholder="mobile number" required>
+      <!-- <input type="submit" id="sendOTP" class="fadeIn fourth" name="login" value="send OTP" /> -->
+      <input type="text" id="password" class="fadeIn third" style="visibility:hidden" name="login" required placeholder="otp">
+      <input type="submit" id="log" class="fadeIn fourth" value="Log In">
     </form>
 
     <!-- Remind Passowrd -->
-    <div id="formFooter">
+    <!-- <div id="formFooter">
       <a class="underlineHover" href="#">Forgot Password?</a>
-    </div>
+    </div> -->
 
   </div>
 </div>
@@ -39,6 +39,7 @@
         document.getElementById("password").style.visibility="visible";
         document.getElementById("log").style.visibility="visible";
       }
+      
   </script>
   </body>
 </html>
