@@ -8,40 +8,37 @@
   </head>
   <body>
     <div class="wrapper fadeInDown">
-        <div id="formContent">
-          <!-- Tabs Titles -->
-          <!-- <a href="index.html"><h2 class="inactive underlineHover"> Sign In </h2></a> -->
-          <h2 class="active">Register To Vote </h2>
-      
-          <!-- Icon -->
-          <div class="fadeIn first">
-            <img src="https://www.youngartiste.com/assets/img/young-artiste-logo-white.png" id="icon" alt="User Icon" />
-          </div>
-      
-          <!-- signup Form -->
-          <form method = "post" enctype = "multipart/form-data">
-            <input type="text" id="signup" class="fadeIn second" name="firstname" placeholder="Enter Name" required="true">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <h2 class="active"> Sign In </h2>
+  <a href="signup.php"><h2 class="inactive underlineHover">Register To Vote </h2></a>
 
-                <!-- <label>Gender</label> <br/> -->
-                    <select class = "form-field" style=" color: #767676;" name = "gender" required="true">
-                    <option disabled selected>Gender</option>    
-                    <option  >Male</option>
-                        <option >Female</option>														
-                    </select>
-            <input type="number" class="form-control" name="Age" placeholder="Enter Age">
-            <input type="text" id="signup2" class="fadeIn second" name="id_number" placeholder="Enter Mobile Number" required="true">
-            <input type="text" id="signup3" class="fadeIn second" name="email" placeholder="Enter E-mail" required="true">
-            <input type="text" id="signup3" class="fadeIn second" name="login" placeholder="Enter OTP" required="true">
-            <input type="submit" name="save" class="fadeIn fourth" value="Enter To Vote">
-          </form>
-      
-          <!-- Saving Data in Database -->
-          <?php //PHP script to insert signup data into database
-								require 'RegisterData.php';
-								
-							?>
-        </div>
-      </div>
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="https://www.youngartiste.com/assets/img/young-artiste-logo-white.png" id="icon" alt="User Icon" />
+    </div>
 
+    <!-- Login Form -->
+    <form>
+      <input type="text" id="login" class="fadeIn second" name="phone" placeholder="mobile number" required>
+      <input type="button" id="sendOTP" onclick="change()" class="fadeIn fourth" name="login" value="send OTP" />
+      <input type="text" id="password" class="fadeIn third" style="visibility:hidden" name="login" placeholder="otp">
+      <input type="submit" id="log" style="visibility:hidden" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div>
+
+  </div>
+</div>
+  <script>
+      function change()
+      {
+        document.getElementById("password").style.visibility="visible";
+        document.getElementById("log").style.visibility="visible";
+      }
+  </script>
   </body>
 </html>
