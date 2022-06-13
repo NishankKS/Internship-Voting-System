@@ -43,7 +43,7 @@ $mobile= $_POST['phone'];
                 <script>
                 alert("Sucessfullly <?php echo $mobile;?> Verified");
                 
-                window.location.assign("http://localhost/Internship-Voting-System/category.php");
+                window.location="category.php";
             
                 
                 
