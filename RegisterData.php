@@ -22,7 +22,7 @@
 			?>
 	            <script>
 			        alert( 'Successfully Registered');
-			         window.location='category.php';
+			         window.location='index.php';
 	            </script>
             <?php
 			
