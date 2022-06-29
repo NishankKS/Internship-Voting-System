@@ -32,7 +32,7 @@ if(!empty($_POST["country_id"])){
                             <iframe src="https://www.youtube.com/embed/KEiAVv1UNac" >
                             </iframe>
                         </div>
-                        <a href="#" class="video-play"></a>
+                        <!-- <a href="#" class="video-play"></a> -->
                     </div>
                     <div class="video-testimonial-content">
                         <h4 class="mb10"><?php echo $row['participant_name'];?></h4>
