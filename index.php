@@ -31,7 +31,7 @@
 		$idno=$_POST['phone'];
 		//$password=$_POST['password'];
 	
-		$result = $conn->query("SELECT * FROM voters WHERE ph_no = '$idno'")->num_rows ;
+		$result = $conn->query("SELECT * FROM voters WHERE ph_no = '$idno' && status='Unvoted'")->num_rows ;
 	
 		
 
@@ -45,7 +45,7 @@
 
 //$name= $_POST['name'];
 //$email= $_POST['email'];
-$mobile= $idno;
+    $mobile= $idno;
 
     #### 2Factor API Setting
     $APIKey='4b64ceb7-f7c9-11ec-9c12-0200cd936042';
@@ -100,6 +100,15 @@ $mobile= $idno;
             $VerificationSessionId= $API_Response_json->Details;
             
     }
+  }
+  else{
+    ?>
+    <script type="text/javascript">
+    alert('Your account is not registered or Sorry You Already Voted');
+    window.history.back();
+    </script>
+    <?php
+  }
 
 ?>
 
@@ -131,15 +140,9 @@ $mobile= $idno;
 
 			<?php
 			
-		}else{
-			?>
-			<script type="text/javascript">
-			alert('Your account is not registered or Sorry You Already Voted');
-			</script>
-			<?php
 		}
 	
-	}
+	
 ?>   
     </form>
     

@@ -17,7 +17,7 @@
 		$count1 = $query->fetch_array();
 		if ($count1 == 0) {
 			$_SESSION['voter_id'] = $row['voter_id'];
-				$conn->query("insert into voters(name,gender,age,ph_no,email) VALUES('$firstname','$gender','$age','$id_number','$email')");
+				$conn->query("insert into voters(name,gender,age,ph_no,email,status) VALUES('$firstname','$gender','$age','$id_number','$email','Unvoted')");
 				//$conn->query("insert into voters(id_number, password, firstname,lastname, gender,Age,status) VALUES('$id_number', '".md5($password)."','$firstname','$lastname', '$gender', '$age','Unvoted')");
 			?>
 	            <script>
