@@ -51,7 +51,7 @@
 							<input class="form-control" type ="text" name = "firstname" placeholder="Please enter Name" required="true">
 					</div>
 							<div class="form-group">
-                        <label>Image</label>
+                        <label>Video</label>
 						<input type="file" name="image"required> 
                     </div>
 						<center><button name = "save" type="submit" class="btn btn-primary">Save Data</button></center>
@@ -76,6 +76,7 @@
 		
 					move_uploaded_file($_FILES["image"]["tmp_name"],"upload/" . $_FILES["image"]["name"]);			
 					$location="upload/" . $_FILES["image"]["name"];
+					
 					
 					
 					$conn->query("INSERT INTO participant(category,participant_name,participant_video)values('$position','$firstname','$location')")or die($conn->error);

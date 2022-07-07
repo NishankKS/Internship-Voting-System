@@ -55,10 +55,10 @@
 					$image_size= getimagesize($_FILES['image']['tmp_name']);
 		
 					move_uploaded_file($_FILES["image"]["tmp_name"],"upload/" . $_FILES["image"]["name"]);			
-					$location="upload/" . $_FILES["image"]["name"];
+					$location="image/" . $_FILES["image"]["name"];
 					
 					
-					$conn->query("INSERT INTO category(category)values('$category')")or die($conn->error);
+					$conn->query("INSERT INTO category(category,img)values('$category','$location')")or die($conn->error);
 				}						
 			?>		
                             
