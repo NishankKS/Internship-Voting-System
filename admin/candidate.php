@@ -30,16 +30,16 @@
 				
 				<hr/>
 				
-                    <div class="panel panel-default">
+                    <div class="panel panel-default" style="border-color:white;">
                         <div class="panel-heading">
                             <h4 class="modal-title" id="myModalLabel">         
 												<div class="panel panel-primary">
-													<div class="panel-heading">
+													<div class="panel-heading" style="background-color:#de9d4d;border-color:#de9d4d">
 														Candidate List
 													</div>  
                                                       
 												</div>
-                                                <a href="candidate_excel.php"><button type="button" style = "margin-right:14px;" id ="print" class = "pull-right btn btn-info"><i class = "fa fa-print"></i>Export to Excel</button></a>
+                                                <a href="candidate_excel.php"><button type="button" style = "margin-right:14px; background-color:#de9d4d;border-color:#de9d4d; margin-top:30px;margin-bottom:30px " id ="print" class = "pull-right btn btn-info"><i class = "fa fa-print"></i>Export to Excel</button></a>
 											</h4>
                         </div>
                         <!-- /.panel-heading -->
